@@ -19,6 +19,8 @@ public:
 	size_t next();
 	/*Makes the turn of the Pancake given and the next ones*/
 	void voltear(size_t pos);
+	/*Return the number of turns or if it's impossible to solve*/
+	std::string solucion();
 private:
 	/*Size of the tool tu turn over the pancakes*/
 	unsigned tam_voltear;
