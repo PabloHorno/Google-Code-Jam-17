@@ -5,3 +5,13 @@ Purpose: Solve problem C of Qualification Round. https://code.google.com/codejam
 @author Pablo Horno
 @version 1.0 14/08/17
 */
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main()
+{
+	ifstream input("input/C-small-practice-1.in");
+	ofstream output("output/C-small-practice-1.out");
+
+
+}
