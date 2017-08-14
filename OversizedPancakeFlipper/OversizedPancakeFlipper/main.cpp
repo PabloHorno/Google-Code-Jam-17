@@ -5,7 +5,6 @@ Purpose: Calculate the minimun turns needed on a PancakeLine.
 @author Pablo Horno
 @version 1.0 14/08/17
 */
-
 #include <iostream>
 #include <fstream>
 #include <string>
