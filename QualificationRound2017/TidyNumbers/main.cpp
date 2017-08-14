@@ -10,11 +10,12 @@ Purpose: Solve problem B of Qualification Round. https://code.google.com/codejam
 #include <string>
 using namespace std;
 
-bool is_tidy_number(string);
+bool is_tidy_number(const string);
+string last_tidy_number(const string);
 int main()
 {
-	ifstream input("input/B-large-practice.in");
-	ofstream output("output/B-large-practice.out");
+	ifstream input("input/B-small-practice.in");
+	ofstream output("output/B-small-practice.out");
 	unsigned casos, i = 0;
 	input >> casos;
 
@@ -24,9 +25,9 @@ int main()
 		input >> numero;
 
 		while (!is_tidy_number(numero))
-			numero = to_string(stoull(numero) - 1);
+			last_tidy_number(numero);
 
-		output << "Case #" << ++i << ": " << numero << endl;
+		cout << "Case #" << ++i << ": " << numero << endl;
 	}
 	cout << "End" << endl;
 }
@@ -35,4 +36,17 @@ bool is_tidy_number(string num) {
 		if (*it > *(it + 1))
 			return false;
 	return true;
+}
+string last_tidy_number(const string num)
+{
+	string numero = num;
+	for (size_t it = 0; it+1 < numero.size(); ++it) {
+		if (numero.at(it) < numero.at(it+1))
+		{
+			numero.at(it) = numero.at(it) - 1;
+			for (size_t it2 = it + 1; it2 < numero.size(); ++it2)
+				numero.at(it2) = '9';
+		}
+	}
+	return to_string(stoull(numero));
 }
