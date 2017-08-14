@@ -11,11 +11,11 @@ Purpose: Solve problem B of Qualification Round. https://code.google.com/codejam
 using namespace std;
 
 bool is_tidy_number(const string);
-string last_tidy_number(const string);
+string last_tidy_number(string);
 int main()
 {
-	ifstream input("input/B-small-practice.in");
-	ofstream output("output/B-small-practice.out");
+	ifstream input("input/B-large-practice.in");
+	ofstream output("output/B-large-practice.out");
 	unsigned casos, i = 0;
 	input >> casos;
 
@@ -25,9 +25,9 @@ int main()
 		input >> numero;
 
 		while (!is_tidy_number(numero))
-			last_tidy_number(numero);
+			numero = last_tidy_number(numero);
 
-		cout << "Case #" << ++i << ": " << numero << endl;
+		output << "Case #" << ++i << ": " << numero << endl;
 	}
 	cout << "End" << endl;
 }
@@ -37,16 +37,15 @@ bool is_tidy_number(string num) {
 			return false;
 	return true;
 }
-string last_tidy_number(const string num)
+string last_tidy_number(string num)
 {
-	string numero = num;
-	for (size_t it = 0; it+1 < numero.size(); ++it) {
-		if (numero.at(it) < numero.at(it+1))
+	for (size_t it = 0; it+1 < num.size(); ++it) {
+		if (num.at(it) > num.at(it+1))
 		{
-			numero.at(it) = numero.at(it) - 1;
-			for (size_t it2 = it + 1; it2 < numero.size(); ++it2)
-				numero.at(it2) = '9';
+			num.at(it) = num.at(it) - 1;
+			for (size_t it2 = it + 1; it2 < num.size(); ++it2)
+				num.at(it2) = '9';
 		}
 	}
-	return to_string(stoull(numero));
+	return to_string(stoull(num));
 }
