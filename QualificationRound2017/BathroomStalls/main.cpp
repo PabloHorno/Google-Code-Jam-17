@@ -29,8 +29,7 @@ int main()
 		}
 		else
 		{
-			max_lr = num_stall / (num_persons * 2);
-			min_lr = max_lr + 1;
+			while()
 		}
 		cout << "Case #" << i << ":" << max_lr << " " << min_lr << endl;
 	}

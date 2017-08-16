@@ -32,3 +32,17 @@ Stall Bathroom::get_padre()
 		else
 			return Stall();
 }
+
+std::pair<unsigned, unsigned> Bathroom::get_min_max()
+{
+	std::pair<unsigned, unsigned> min_max;
+	std::vector<unsigned> espacios;
+
+	for (auto node : nodes)
+		if (!node.visitado)
+			espacios.push_back(node.espacio_libre);
+
+	min_max.first = *std::max_element(espacios.begin(), espacios.end());
+	min_max.first = *std::min_element(espacios.begin(), espacios.end());
+	return min_max;
+}
