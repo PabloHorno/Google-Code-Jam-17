@@ -30,7 +30,7 @@ Stall Bathroom::get_padre()
 {
 	if(nodes.empty())
 		nodes.push_back(Stall(indice))
-	for (auto padre : nodes)
+	for (auto padre : nodes) 
 		if (padre.visitado == false)
 			return padre;
 		else
