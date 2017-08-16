@@ -29,7 +29,7 @@ int main()
 		}
 		else
 		{
-			bathroom.expandir();
+
 		}
 		cout << "Case #" << i << ":" << max_lr << " " << min_lr << endl;
 	}
