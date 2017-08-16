@@ -12,6 +12,25 @@ int main()
 {
 	ifstream input("input/C-small-practice-1.in");
 	ofstream output("output/C-small-practice-1.out");
+	unsigned num_casos, i = 0;
 
+	input >> num_casos;
+	while (!input.eof())
+	{
+		i++;
+		unsigned num_stall, num_persons, min_lr = 1, max_lr = 1;
+		input >> num_stall >> num_persons;
+
+
+		if (num_stall == num_persons)
+		{
+			min_lr = 0; max_lr = 0;
+		}
+		else
+		{
+
+		}
+		cout << "Case #" << i << ":" << min_lr << " " << max_lr << endl;
+	}
 
 }
