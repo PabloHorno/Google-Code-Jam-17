@@ -2,9 +2,10 @@
 
 
 
-Bathroom::Bathroom()
+Bathroom::Bathroom(unsigned espacio)
 {
 	nodes.clear();
+	nodes.push_back(Stall(espacio));
 }
 
 
@@ -19,10 +20,7 @@ void Bathroom::expandir()
 	else {
 		derecha.espacio_libre = padre.espacio_libre / 2;
 		izquierda.espacio_libre = padre.espacio_libre / 2;
-	}
-
-	izquierda.espacio_libre = padre.espacio_libre / 2;
-	
+	}	
 
 }
 

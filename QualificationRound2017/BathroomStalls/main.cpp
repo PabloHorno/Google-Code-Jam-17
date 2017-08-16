@@ -7,6 +7,7 @@ Purpose: Solve problem C of Qualification Round. https://code.google.com/codejam
 */
 #include <iostream>
 #include <fstream>
+#include "Bathroom.h"
 using namespace std;
 int main()
 {
@@ -20,7 +21,7 @@ int main()
 		i++;
 		unsigned num_stall, num_persons, min_lr = 1, max_lr = 1;
 		input >> num_stall >> num_persons;
-
+		Bathroom bathroom(num_stall);
 
 		if (num_stall == num_persons)
 		{

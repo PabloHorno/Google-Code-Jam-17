@@ -4,15 +4,15 @@
 #include <cmath>
 class Stall {
 public:
+	Stall(unsigned espacio) { this->espacio_libre = espacio;};
 	Stall() {};
 	bool visitado = false;
-	unsigned padre;
 	unsigned espacio_libre;
 };
 class Bathroom
 {
 public:
-	Bathroom();
+	Bathroom(unsigned espacio);
 
 	void expandir();
 
