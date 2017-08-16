@@ -30,7 +30,7 @@ int main()
 		{
 
 		}
-		cout << "Case #" << i << ":" << min_lr << " " << max_lr << endl;
+		cout << "Case #" << i << ":" << max_lr << " " << min_lr << endl;
 	}
 
 }
