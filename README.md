@@ -1,2 +1,2 @@
 # GoogleCodeJam17
-By: *Pablo Horno*
+**By:** *Pablo Horno*
